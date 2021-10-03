@@ -13,9 +13,10 @@
         <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="./assets/fonts/fontawesome-free-5.15.4-web/css/all.min.css">
         <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css">
+        <link href="./assets/aos-master/dist/aos.css" rel="stylesheet">
+        <link rel="stylesheet" href="./assets/splide-2.4.21/dist/css/splide.min.css">
         <link rel="stylesheet" href="./assets/css/base.css">
         <link rel="stylesheet" href="./assets/css/main.css">
-        <link href="./assets/aos-master/dist/aos.css" rel="stylesheet">
         <link rel="stylesheet" href="./assets/css/responsive.css">
     </head>
 
@@ -509,13 +510,40 @@
                     </div>
 
                     <div class="testimonials__row">
-                        <div class="testimonials__introduction">
-                            <img src="./assets/img/member_3.jpg" alt="" class="testimonials__introduction-img">
-                            <blockquote class="testimonials__introduction-quote text-center">“Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur unde reprehenderit aperiam quaerat fugiat repudiandae explicabo animi minima fuga beatae illum eligendi incidunt consequatur. Amet dolores excepturi earum unde iusto.”</blockquote>
-                            <p class="testimonials__introduction-name text-center">John Smith</p>
+                        <div class="splide testimonials__slider">
+                            <div class="splide__track">
+                                <ul class="splide__list">
+                                    <li class="splide__slide">
+                                        <div class="testimonials__introduction">
+                                            <img src="./assets/img/member_3.jpg" alt="" class="testimonials__introduction-img">
+                                            <blockquote class="testimonials__introduction-quote text-center">“Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur unde reprehenderit aperiam quaerat fugiat repudiandae explicabo animi minima fuga beatae illum eligendi incidunt consequatur. Amet dolores excepturi earum unde iusto.”</blockquote>
+                                            <p class="testimonials__introduction-name text-center">John Smith</p>
+                                        </div>
+                                    </li>
+                                    <li class="splide__slide">
+                                        <div class="testimonials__introduction">
+                                            <img src="./assets/img/member_2.jpg" alt="" class="testimonials__introduction-img">
+                                            <blockquote class="testimonials__introduction-quote text-center">“Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur unde reprehenderit aperiam quaerat fugiat repudiandae explicabo animi minima fuga beatae illum eligendi incidunt consequatur. Amet dolores excepturi earum unde iusto.”</blockquote>
+                                            <p class="testimonials__introduction-name text-center">Robert Aguilar</p>
+                                        </div>
+                                    </li>
+                                    <li class="splide__slide">
+                                        <div class="testimonials__introduction">
+                                            <img src="./assets/img/member_4.jpg" alt="" class="testimonials__introduction-img">
+                                            <blockquote class="testimonials__introduction-quote text-center">“Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur unde reprehenderit aperiam quaerat fugiat repudiandae explicabo animi minima fuga beatae illum eligendi incidunt consequatur. Amet dolores excepturi earum unde iusto.”</blockquote>
+                                            <p class="testimonials__introduction-name text-center">Roger Spears</p>
+                                        </div>
+                                    </li>
+                                    <li class="splide__slide">
+                                        <div class="testimonials__introduction">
+                                            <img src="./assets/img/member_1.jpg" alt="" class="testimonials__introduction-img">
+                                            <blockquote class="testimonials__introduction-quote text-center">“Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur unde reprehenderit aperiam quaerat fugiat repudiandae explicabo animi minima fuga beatae illum eligendi incidunt consequatur. Amet dolores excepturi earum unde iusto.”</blockquote>
+                                            <p class="testimonials__introduction-name text-center">Kyle McDonald</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-
-                        <div class="testimonials__nav"></div>
                     </div>
                 </div>
             </div>
@@ -669,4 +697,19 @@
     <!-- Fade animation -->
     <script src="./assets/aos-master/dist/aos.js"></script>
     <script>AOS.init();</script>
+
+    <!-- Slider animation -->
+    <script src="./assets/splide-2.4.21/dist/js/splide.min.js"></script>
+    <script>
+        document.addEventListener( 'DOMContentLoaded', function () {
+            new Splide( '.testimonials__slider', {
+                type: 'loop',
+                perPage: '1',
+                speed: '400',
+                arrows: false,
+                autoplay: true,
+                interval: '3800',
+            } ).mount();
+        } );
+    </script>
 </html>
