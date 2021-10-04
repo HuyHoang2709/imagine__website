@@ -4,7 +4,7 @@
     padding: 24px 0;
     background-color: var(--white-color);
     width: 100%;
-    z-index: 1;
+    z-index: 2;
     transition: all 0.3s ease;
 }
 
@@ -80,7 +80,7 @@
     border: 1px solid #edf0f5;
     border-top: 2px solid var(--primary-color);
     box-shadow: -1px 2px 5px rgba(0, 0, 0, 0.05);
-    z-index: 2;
+    z-index: 3;
     display: none;
     animation: floatUp 0.2s linear;
     background-color: var(--white-color);
@@ -121,7 +121,7 @@
     left: 100%;
     border: 1px solid #edf0f5;
     border-top: 2px solid var(--primary-color);
-    z-index: 3;
+    z-index: 4;
     display: none;
     background-color: var(--white-color);
     animation: floatUp 0.2s linear;
